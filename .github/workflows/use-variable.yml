@@ -6,6 +6,8 @@ jobs:
   check-workflow-property:
     runs-on: ubuntu-latest
     steps:
+
+        # example 1
       - name: echo a string
         id: echo_1
         run: echo "Hello wolrd"
@@ -14,3 +16,14 @@ jobs:
         run: |
           echo " output ${{ steps.echo_1.outputs.time }}"
           echo " name of that step is ${{ steps.echo_1.name }}"
+        
+        # example 2
+      - name: JS script template
+        id: greeting
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: 'Mona the Octocat'
+          
+      - name: Checkout output return from template
+        run: echo " output of js template is ${{  steps.greeting.outputs.time  }}"
+        
