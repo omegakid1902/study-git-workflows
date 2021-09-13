@@ -1,10 +1,10 @@
-name: Shell command
+name: Shell commands
 
 on: [push]
 
 jobs:
-  run-shell-command:
-    run-on: ubuntu-latest
+  run-shell-example:
+    runs-on: ubuntu-latest
     steps:
       - name: echo a string
         run: echo "Hello wolrd"
