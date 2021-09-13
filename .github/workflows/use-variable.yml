@@ -11,4 +11,6 @@ jobs:
         run: echo "Hello wolrd"
 
       - name: Get result of echo step
-        run: echo "${{ steps.echo_1.outputs.time }}"
+        run: |
+          echo " output ${{ steps.echo_1.outputs.time }}"
+          echo " name of that step is ${{ steps.echo_1.name }}"
