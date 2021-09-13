@@ -17,7 +17,6 @@ jobs:
         run: echo "second-job"
 
   third-job:
-    needs: ["second-job"]
     runs-on: ubuntu-latest
     steps:
       - name: echo second-jobs
@@ -25,7 +24,7 @@ jobs:
 
   four-job:
     runs-on: ubuntu-latest
-    needs: ["second-job"]
+    needs: ["second-job", "third-job"]
     steps:
       - name: echo four-job
         run: echo "four-job"
