@@ -24,7 +24,7 @@ jobs:
 
   four-job:
     runs-on: ubuntu-latest
-    needs: ["second-job", "third-job"]
+    needs: ["first-job", "third-job"]
     steps:
       - name: echo four-job
         run: echo "four-job"
