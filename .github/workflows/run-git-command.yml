@@ -11,17 +11,17 @@ jobs:
           pwd
           ls -a
 
-      #- name: Checkout
-      #  uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v1
 
-      - name: Same purpose with template actions/checkout@v1
-        run: |
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
-          echo "${{ github.token }}"
-          git clone git@github:$GITHUB_REPOSITORY
-          git checkout $GITHUB_SHA
+#      - name: Same purpose with template actions/checkout@v1
+#        run: |
+#          echo $GITHUB_SHA
+#          echo $GITHUB_REPOSITORY
+#          echo $GITHUB_WORKSPACE
+#          echo "${{ github.token }}"
+#          git clone git@github:$GITHUB_REPOSITORY
+#          git checkout $GITHUB_SHA
 
       - name: List files after checkout
         run: |
