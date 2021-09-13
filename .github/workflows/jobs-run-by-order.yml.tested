@@ -19,7 +19,7 @@ jobs:
   third-job:
     runs-on: ubuntu-latest
     steps:
-      - name: echo second-jobs
+      - name: echo third-jobs
         run: echo "third-job"
 
   four-job:
