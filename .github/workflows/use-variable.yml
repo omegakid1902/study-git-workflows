@@ -1,0 +1,14 @@
+name: Use workflows property value
+
+on: [push]
+
+jobs:
+  check-workflow-property:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        id: echo_1
+        run: echo "Hello wolrd"
+
+      - name: Get result of echo step
+        run: echo "${{ steps.echo_1.outputs.time }}"
