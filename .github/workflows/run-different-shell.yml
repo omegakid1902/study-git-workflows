@@ -1,4 +1,4 @@
-name: Shell command
+name: Run python shell
 
 on: [push]
 
