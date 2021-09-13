@@ -6,6 +6,7 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
-      uses: actions/hello-world-javascript-action@main
-      with:
-        who-to-greet: 'Mona the Octocat'
+      - name: Use a template
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: 'Mona the Octocat'
