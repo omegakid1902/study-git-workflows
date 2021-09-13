@@ -4,21 +4,23 @@ on: [push]
 
 jobs:
   action-on-git:
-    - name: List files
-      run: |
-        pwd
-        ls -a
-        echo $GITHUB_SHA
-        echo $GITHUB_REPOSITORY
-        echo $GITHUB_WORKSPACE
-        echo "${{ github.token }}"
-        #git clone git@github:$GITHUB_REPOSITORY
-        #git checkout $GITHUB_SHA
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
+          #git clone git@github:$GITHUB_REPOSITORY
+          #git checkout $GITHUB_SHA
 
-    - name: Checkout
-      uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v1
 
-    - name: List files after checkout
-      run: |
-        pwd
-        ls -a
+      - name: List files after checkout
+        run: |
+          pwd
+          ls -a
